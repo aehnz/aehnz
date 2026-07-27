@@ -154,7 +154,7 @@ class Engineer {
 
 <br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=aehnz&theme=discord&no-frame=true&no-bg=true&column=7&margin-w=10&margin-h=10" width="88%" />
+<img src="https://github-profile-trophy.vercel.app/?username=aehnz&theme=onestar&no-frame=true&no-bg=true&column=7&margin-w=10&margin-h=10" width="88%" />
 
 </div>
 
