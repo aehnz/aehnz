@@ -1,6 +1,6 @@
 # Pac-Man contribution grid animation
-# Generates SVGs where Pac-Man eats through the contribution graph.
-# Schedule: daily at 00:00 UTC + manual dispatch
+# Eats through your contribution graph daily
+# Output: SVGs pushed to the `output` branch
 
 name: Pac-Man Contribution Animation
 
@@ -10,18 +10,20 @@ on:
   workflow_dispatch:
 
 jobs:
-  pacman:
+  generate:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write
 
     steps:
-      - name: Generate Pac-Man animation
+      - name: Generate contribution animation
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/pacman-contribution.svg
-            dist/pacman-contribution-dark.svg?palette=github-dark&color_snake=#6C63FF&color_dots=#0d1117,#1a1040,#3b2d8f,#6C63FF,#00D9FF
+            dist/pacman-contribution-dark.svg?palette=github-dark
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
